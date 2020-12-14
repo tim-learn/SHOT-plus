@@ -1,6 +1,6 @@
-# SHOT-plus
+# SHOT++
 
-Code for our TPAMI submission that is extended from [**Do We Really Need to Access the Source Data? Source Hypothesis Transfer for Unsupervised Domain Adaptation**](https://arxiv.org/abs/2002.08546). 
+Code for our TPAMI submission "Source Data-absent Unsupervised Domain Adaptation through Hypothesis Transfer and Labeling Transfer" that is extended from SHOT([**Do We Really Need to Access the Source Data? Source Hypothesis Transfer for Unsupervised Domain Adaptation**](http://proceedings.mlr.press/v119/liang20a/liang20a.pdf)). 
 
 
 
