@@ -119,12 +119,12 @@
 	
 	- Adaptation to the target domain **Cl** (**t = 1**) [hypothesis transfer]
 	```python	
-	python image_target.py --cls_par 0.1 --ssl 0.2 --gpu_id 1 --seed 2021 --output_src ckps/source --output ckps/target --dset office-home --s 0 --t 1 
+	python image_target.py --gpu_id 0 --seed 2021 --cls_par 0.1 --ssl 0.2 --output_src ckps/source --output ckps/target --dset office-home --s 0 --t 1 
 	```
 
 	- Adaptation to the target domain **Cl** (**t = 1**) [labeling transfer]
 	```python
-	python image_mixmatch.py --gpu_id 1 --seed 2021 --ps 0.0 --cls_par 0.1 --ssl 0.2 --output_tar ckps/target --output ckps/mixmatch --dset office-home --max_epoch 50 --s 0 --t 1
+	python image_mixmatch.py --gpu_id 0 --seed 2021 --ps 0.0 --cls_par 0.1 --ssl 0.2 --output_tar ckps/target --output ckps/mixmatch --dset office-home --max_epoch 50 --s 0 --t 1
 	```
 
 **Please refer *./xxda/run_xxda.sh*** for all the settings for different methods and scenarios.
