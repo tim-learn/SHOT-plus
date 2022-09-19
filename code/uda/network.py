@@ -475,9 +475,9 @@ class EfficientBase(nn.Module):
         x = self._swish(self._bn1(self._conv_head(x)))
         return x
 
-class feat_bootleneck(nn.Module):
+class feat_bottleneck(nn.Module):
     def __init__(self, feature_dim, bottleneck_dim=256, type="ori"):
-        super(feat_bootleneck, self).__init__()
+        super(feat_bottleneck, self).__init__()
         self.bn = nn.BatchNorm1d(bottleneck_dim, affine=True)
         self.relu = nn.ReLU(inplace=True)
         self.dropout = nn.Dropout(p=0.5)

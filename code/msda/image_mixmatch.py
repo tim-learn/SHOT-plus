@@ -39,7 +39,7 @@ def split_target(args):
         shuffle=False, num_workers=args.worker, drop_last=False)
 
     netF = network.ResBase(res_name=args.net).cuda()
-    netB = network.feat_bootleneck(type=args.classifier, feature_dim=netF.in_features, bottleneck_dim=args.bottleneck).cuda()
+    netB = network.feat_bottleneck(type=args.classifier, feature_dim=netF.in_features, bottleneck_dim=args.bottleneck).cuda()
     netC = network.feat_classifier(type=args.layer, class_num = args.class_num, bottleneck_dim=args.bottleneck).cuda()
 
     if args.model == "source":
@@ -220,7 +220,7 @@ def train(args, txt_src, txt_tgt):
     elif args.net[0:3] == 'vgg':
         netG = network.VGGBase(vgg_name=args.net).cuda() 
 
-    netB = network.feat_bootleneck(type=args.classifier, feature_dim=netG.in_features, bottleneck_dim=args.bottleneck).cuda()
+    netB = network.feat_bottleneck(type=args.classifier, feature_dim=netG.in_features, bottleneck_dim=args.bottleneck).cuda()
     netC = network.feat_classifier(type=args.layer, class_num = args.class_num, bottleneck_dim=args.bottleneck).cuda()
 
     if args.model == "source":
